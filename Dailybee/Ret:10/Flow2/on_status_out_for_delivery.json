@@ -3,21 +3,21 @@
     "domain": "ONDC:RET10",
     "country": "IND",
     "city": "std:080",
-    "action": "confirm",
+    "action": "on_status",
     "core_version": "1.2.0",
     "bap_id": "buyer-app-preprod-v2.ondc.org",
     "bap_uri": "https://buyer-app-preprod-v2.ondc.org/protocol/v1",
+    "bpp_id": "ondc-pp-v2.dlyb.in",
     "bpp_uri": "https://ondc-pp-v2.dlyb.in/v2/retailSeller",
     "transaction_id": "987d2e24-fcd5-49a3-90c5-309eec157971",
-    "message_id": "44345df9-2cbb-4485-80ce-3753d2e43155",
-    "timestamp": "2024-03-29T09:06:42.751Z",
-    "bpp_id": "ondc-pp-v2.dlyb.in",
+    "message_id": "92c30f25-ac7d-4ade-9192-296bc4975cf9",
+    "timestamp": "2024-03-29T09:07:52.581Z",
     "ttl": "PT30S"
   },
   "message": {
     "order": {
       "id": "2024-03-29-956569",
-      "state": "Created",
+      "state": "In-progress",
       "billing": {
         "address": {
           "name": "Santosh Novotel",
@@ -34,38 +34,47 @@
         "created_at": "2024-03-29T09:06:22.160Z",
         "updated_at": "2024-03-29T09:06:22.160Z"
       },
-      "items": [
-        {
-          "id": "656ee4d200e217305d24b733",
-          "quantity": {
-            "count": 2
-          },
-          "fulfillment_id": "SD_PL_65b7a8a9ee15576c92ed0725"
-        },
-        {
-          "id": "656ee4d200e217305d24b73f",
-          "quantity": {
-            "count": 2
-          },
-          "fulfillment_id": "SD_PL_65b7a8a9ee15576c92ed0725"
-        }
-      ],
-      "provider": {
-        "id": "65b7a8a9ee15576c92ed0725",
-        "locations": [
-          {
-            "id": "PL_65b7a8a9ee15576c92ed0725"
-          }
-        ]
-      },
       "fulfillments": [
         {
-          "@ondc/org/TAT": "PT2H",
           "id": "SD_PL_65b7a8a9ee15576c92ed0725",
+          "@ondc/org/provider_name": "Dailybee - Grocery Test",
+          "state": {
+            "descriptor": {
+              "code": "Out-for-delivery",
+              "name": "Out-for-delivery"
+            }
+          },
+          "type": "Delivery",
           "tracking": true,
+          "@ondc/org/TAT": "PT2H",
+          "start": {
+            "location": {
+              "id": "PL_65b7a8a9ee15576c92ed0725",
+              "descriptor": {
+                "name": "Dailybee - Grocery Test"
+              },
+              "gps": "12.932463,77.685220",
+              "address": {
+                "locality": "Bellandur",
+                "city": "Bengaluru",
+                "area_code": "560103",
+                "state": "Karnataka"
+              }
+            },
+            "time": {
+              "range": {
+                "end": "2024-03-29T10:06:43.020Z",
+                "start": "2024-03-29T09:36:43.020Z"
+              },
+              "timestamp": "2024-03-29T09:07:52.581Z"
+            },
+            "contact": {
+              "phone": "9394706872",
+              "email": "help@dailybee.in"
+            }
+          },
           "end": {
             "contact": {
-              "email": "santosh@gmail.com",
               "phone": "9999999999"
             },
             "person": {
@@ -82,9 +91,30 @@
                 "country": "IND",
                 "area_code": "560103"
               }
+            },
+            "time": {
+              "range": {
+                "end": "2024-03-29T11:06:43.020Z",
+                "start": "2024-03-29T10:36:43.020Z"
+              }
             }
+          }
+        }
+      ],
+      "items": [
+        {
+          "id": "656ee4d200e217305d24b733",
+          "quantity": {
+            "count": 2
           },
-          "type": "Delivery"
+          "fulfillment_id": "SD_PL_65b7a8a9ee15576c92ed0725"
+        },
+        {
+          "id": "656ee4d200e217305d24b73f",
+          "quantity": {
+            "count": 2
+          },
+          "fulfillment_id": "SD_PL_65b7a8a9ee15576c92ed0725"
         }
       ],
       "payment": {
@@ -111,6 +141,14 @@
             "settlement_ifsc_code": "KKBK0007466",
             "bank_name": "Kotak Mahindra Bank Ltd",
             "branch_name": "Madhapur, Hyderabad"
+          }
+        ]
+      },
+      "provider": {
+        "id": "65b7a8a9ee15576c92ed0725",
+        "locations": [
+          {
+            "id": "PL_65b7a8a9ee15576c92ed0725"
           }
         ]
       },
@@ -173,8 +211,16 @@
           "code": "bpp_terms",
           "list": [
             {
+              "code": "np_type",
+              "value": "MSN"
+            },
+            {
               "code": "tax_number",
               "value": "36AAICK6920A1ZS"
+            },
+            {
+              "code": "provider_tax_number",
+              "value": "AAICK6920A"
             }
           ]
         },
@@ -189,7 +235,13 @@
         }
       ],
       "created_at": "2024-03-29T09:06:42.751Z",
-      "updated_at": "2024-03-29T09:06:42.751Z"
+      "updated_at": "2024-03-29T09:07:52.581Z",
+      "documents": [
+        {
+          "url": "http://stg.dlyb.in/o/2024-03-29-956569",
+          "label": "Invoice"
+        }
+      ]
     }
   }
 }
