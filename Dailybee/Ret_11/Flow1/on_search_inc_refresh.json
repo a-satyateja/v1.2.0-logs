@@ -21,22 +21,31 @@
           "id": "663b43b55123b55984298e82",
           "items": [
             {
-              "id": "663b452a5123b55984298e77",
+              "id": "663b452a5123b55984298e8e",
               "time": {
-                "label": "disable",
-                "timestamp": "2024-09-23T13:35:14.147Z"
+                "label": "enable",
+                "timestamp": "2024-10-04T09:22:36.035Z"
               },
               "descriptor": {
-                "name": "Chicken fried Nugget Snack",
+                "name": "Chicken Fillet Nugget Snack",
                 "symbol": "https://assets.dlyb.in/thumbs/logo-grayscale.png",
-                "short_desc": "chicken fried  nuggets come with a sauce of your choice (nugget/garlic sauce). Bite-sized pieces of tender all breast chicken fried, marinated in our unique & signature blend, breaded and seasoned to perfection, then deep-fried until deliciously tender, crispy with a golden crust",
-                "long_desc": "Chicken fried Nugget Snackchicken fried  nuggets come with a sauce of your choice (nugget/garlic sauce). Bite-sized pieces of tender all breast chicken fillets, marinated in our unique & signature blend, breaded and seasoned to perfection, then deep-fried until deliciously tender, crispy with a golden crust",
+                "short_desc": "chicken fillet  nuggets come with a sauce of your choice (nugget/garlic sauce). Bite-sized pieces of tender all breast chicken fillets, marinated in our unique & signature blend, breaded and seasoned to perfection, then deep-fried until deliciously tender, crispy with a golden crust",
+                "long_desc": "Chicken Fillet Nugget Snackchicken fillet  nuggets come with a sauce of your choice (nugget/garlic sauce). Bite-sized pieces of tender all breast chicken fillets, marinated in our unique & signature blend, breaded and seasoned to perfection, then deep-fried until deliciously tender, crispy with a golden crust",
                 "images": ["https://assets.dlyb.in/thumbs/logo-grayscale.png"]
               },
               "quantity": {
-                "unitized": { "measure": { "unit": "unit", "value": "1" } },
-                "available": { "count": "99" },
-                "maximum": { "count": "15" }
+                "unitized": {
+                  "measure": {
+                    "unit": "unit",
+                    "value": "1"
+                  }
+                },
+                "available": {
+                  "count": "0"
+                },
+                "maximum": {
+                  "count": "15"
+                }
               },
               "price": {
                 "currency": "INR",
@@ -59,7 +68,12 @@
               "tags": [
                 {
                   "code": "veg_nonveg",
-                  "list": [{ "code": "veg", "value": "yes" }]
+                  "list": [
+                    {
+                      "code": "non_veg",
+                      "value": "yes"
+                    }
+                  ]
                 }
               ]
             }
